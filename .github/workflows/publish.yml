@@ -1,0 +1,45 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  ENVIRONMENT: production
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NPM_REGISTRY: https://registry.npmjs.org
+  PACKAGE_NAME:
+  PACKAGE_VERSION:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: ${{ env.NPM_REGISTRY }}
+
+      - name: Read package.json
+        uses: rexdefuror/read-package-json@v1.0.5
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - run: npm publish
+
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ env.PACKAGE_VERSION }}
+          name: v${{ env.PACKAGE_VERSION }}
+          prerelease: ${{ env.ENVIRONMENT != 'production' }}

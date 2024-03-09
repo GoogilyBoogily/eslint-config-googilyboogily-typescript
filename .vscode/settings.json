@@ -1,0 +1,25 @@
+{
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"cSpell.words": ["burnthemall", "camelcase", "cobertura", "commitlint", "dtos", "nonwords", "Parens"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.lintTask.options": ". --ext .js,.ts",
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"prettier.requireConfig": true,
+	"typescript.tsdk": "node_modules\\typescript\\lib"
+}
