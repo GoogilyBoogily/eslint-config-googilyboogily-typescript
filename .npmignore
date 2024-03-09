@@ -1,0 +1,44 @@
+# Tests and coverage
+.nyc_output/
+coverage/
+test/
+
+# Example code
+examples/
+
+# Logs
+*.log
+
+# Build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+.github
+
+# Linters
+.jscsrc
+.jshintrc
+.eslint*
+.prettierrc
+.prettierignore
+
+# Editor settings
+.idea
+.editorconfig
+.vscode/
+
+# Other
+.gitattributes
+.husky
+.markdownlint*
+coverage
+tsconfig*
+
+# Source code
+src/
+
+# Test code
+jest.config.ts
+dist/jest.config*
+test/
+dist/test/
