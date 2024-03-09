@@ -1,10 +1,10 @@
 {
 	"name": "eslint-config-googilyboogily-typescript",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "An ESLint shareable config for TypeScript projects by me, GoogilyBoogily",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SemprisGit/eslint-config-typescript.git"
+		"url": "https://github.com/GoogilyBoogily/eslint-config-googilyboogily-typescript.git"
 	},
 	"license": "ISC",
 	"author": {
@@ -35,7 +35,7 @@
 		"cspell": "8.6.0",
 		"depcheck": "1.4.7",
 		"eslint": "8.57.0",
-		"eslint-config-googilyboogily-typescript": "1.0.0",
+		"eslint-config-googilyboogily-typescript": "1.0.1",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-import-resolver-typescript": "3.6.1",
 		"eslint-plugin-import": "2.29.1",
